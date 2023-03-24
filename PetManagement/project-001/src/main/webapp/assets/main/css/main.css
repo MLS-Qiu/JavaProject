@@ -1,0 +1,159 @@
+@charset "utf-8";
+html {
+    overflow: auto;
+}
+
+.ctr {
+    height: 100%;
+    width: 100%;
+    background-color: #DAC6E1;
+    color: #7a3b77;
+}
+
+
+/* 左边菜单部分 */
+/*.hp{
+    border-top: 3px dashed #7a3b77;
+    border-bottom: 3px dashed #7a3b77;
+}*/
+.left {
+    width: 200px;
+    height: 100%;
+}
+
+/* 标题 */
+.title > div {
+    float: left;
+}
+
+.title > div > img {
+    width: 70px;
+    height: 70px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.title > div:nth-child(2) {
+    width: 100px;
+    height: 100%;
+    font-size: 50px;
+    padding-top: 10px;
+}
+.logout{
+    display: flex;
+}
+
+.logout>a{
+    text-decoration: none;
+    color:  #7a3b77;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.logout>a:hover{
+    text-decoration: underline;
+    color: rgb(235, 148, 14);
+}
+.logout>a:active{
+    text-decoration: underline;
+    color: rgb(224, 97, 56);
+}
+
+/* 菜单列表 */
+.left > ul {
+    height: calc(100% - 190px);
+    width: 100%;
+    font-size: 20px;
+    margin: 0%;
+    padding: 0%;
+
+}
+
+.left > ul > li:not(.level1) {
+    list-style-type: none;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+
+.level1 > div:hover, .level2 > li:hover,.hp:hover{
+    background-color: rgba(190,94,138,0.5);
+}
+
+.level1 > div:active,.level2 > li:active ,.hp:active{
+    background-color: rgba(190,94,138,0.8);
+}
+
+.level1 {
+    padding: 0px;
+}
+
+
+.left > ul > li > a {
+    text-decoration: none;
+    color:  #7a3b77;
+
+}
+
+.level1 > div {
+    display: flex;
+    height: 58px;
+}
+
+.level1 > div > p {
+    display: block;
+    height: 28px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 35px;
+}
+
+.level1 > div > img {
+    width: 20px;
+    height: 20px;
+    margin-top: 19px;
+    margin-bottom: 19px;
+    margin-left: 5px;
+}
+
+.level2 {
+    display: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    background-color: #c9abd5;
+}
+
+.level2 > li {
+    list-style-type: none;
+    display: flex;
+    height: 40px;
+}
+
+.level2 > li > a {
+    margin: auto;
+    text-decoration: none;
+    color:  #7a3b77;
+}
+
+.current > img {
+    transform: rotate(90deg);
+}
+
+/* 信息显示部分 */
+.content {
+    margin: 0;
+    padding: 0;
+    width: calc(100% - 200px);
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    background: #fff;
+    font-size: 0%;
+}
+
+.content > iframe {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}

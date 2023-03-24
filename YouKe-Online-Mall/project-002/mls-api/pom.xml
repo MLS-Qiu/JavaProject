@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.mls</groupId>
+        <artifactId>project-002</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>mls-api</artifactId>
+
+    <properties>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!--可以使用RestController-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <!--导入service-->
+        <dependency>
+            <groupId>com.mls</groupId>
+            <artifactId>mls-service</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!--导入service的实现-->
+        <dependency>
+            <groupId>com.mls</groupId>
+            <artifactId>mls-serviceImpl</artifactId>
+            <version>1.0.0</version>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
+
+</project>

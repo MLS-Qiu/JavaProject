@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------------------------------------------------------- */
+
+/* 搜索区 */
+
+.search {
+    font-size: 18px;
+    color: #55285A;
+    padding: 20px 20px 0px 30px;
+}
+
+.search>form{
+    margin-bottom: 0px;
+}
+
+.level1>div>label{
+    display: inline-block;
+    width: 85px;
+}
+
+.level1>div:nth-last-child(1){
+    margin-right: 0px;
+    margin-top: 10px;
+}
+.level1>div{
+    margin-top: 10px;
+    margin-right: 30px;
+    padding: 0;
+    text-align: center;
+}
+
+.levelTime>div{
+    margin-top: 10px;
+    margin-right: 100px;
+}
+
+.levelTime>div:nth-last-child(1){
+    margin-right: 0;
+}
+
+.search>form>div>div>input,.search>form>div>div>select{
+    outline: none;
+    -web-kit-appearance: none;
+    -moz-appearance: none;
+    background-color: #FFF7FE;
+    border: rgb(67, 67, 154) 3px dotted;
+    border-radius: 15px;
+    padding-left: 7px;
+    font-size: 15px;
+    color: #797bb9;
+    width: 175px;
+    height: 30px;
+    text-align: center;
+}
+
+.level1>div>input::placeholder{
+    font-size: 15px;
+    color: #797bb9;
+}
+
+
+/* ---------------------------------------------------------------- */
+
+/* 操作区 */
+.action {
+    padding: 10px 30px;
+    display: flex;
+}
+
+.action>div{
+    margin: auto;
+}
+
+
+.action>div>div {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    margin-right: 40px;
+}
+.action>div>div:nth-last-child(1){
+    margin-right: 0px;
+}
+
+.action>div>div>button{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    border-radius: 25px;
+    background-color: rgb(98, 106, 192);
+    color: #fff;
+    border: none;
+}
+
+.action>div>div>button:hover{
+    background-color: rgb(243, 193, 234);
+}
+.action>div>div>button:active{
+    background-color: #dac6e1;
+}
+
+.del-bnt{
+    background-color: rgb(224, 97, 56);
+}
+.reset-bnt{
+    background-color: rgb(235, 148, 14);
+}
+/* ---------------------------------------------------------------- */
+
+/* 信息显示区 */
+.display {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    padding: 10px 20px;
+    font-size: 18px;
+    height: 680px;
+}
+.act-check{
+    background-color: #797bb9;
+}
+
+
+.display>#tbl {
+    table-layout:fixed;
+    border-collapse: collapse;
+}
+.display>#tbl tr{
+    height: 50px;
+}
+.display>#tbl tr:nth-child(1){
+    height: 50px;
+}
+.display>#tbl tr:nth-child(even){
+    background-color: #F9F1F9;
+}
+.display>#tbl>tbody>tr:hover{
+    background-color: #dac6e1;
+}
+
+
+.display>#tbl tr>td,
+.display>#tbl tr>th>div {
+    height: 100%;
+    width: 105px;
+    padding: 10px 15px;
+    color: #55285A;
+    text-align: center;
+}
+.display>#tbl tr>td,
+.display>#tbl tr>th {
+    border-top: 1px solid rgb(67, 67, 154);
+    border-bottom: 1px solid rgb(67, 67, 154);
+}
+
+.display>#tbl tr>td{
+    font-size: 14px;
+    width: 230px;
+    max-width: 200px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+/* ---------------------------------------------------------------- */
+
+/* 分页区 */
+.paginate{
+    padding: 10px 30px;
+    display: flex;
+}
+
+.paginate>*{
+    margin: auto;
+}
+
+.paginate>ul {
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+
+}
+
+.paginate>ul>li {
+    float: left;
+    padding: 10px 15px;
+    background-color: #DAC6E1;
+}
+
+.paginate>ul>li:nth-child(1) {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.paginate>ul>li:nth-last-child(1) {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.paginate>ul>li>a {
+    text-decoration: none;
+    /* color: #5a191b; */
+    color: #7a3b77;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.paginate>ul>li:hover {
+    background-color: #DAC6E1;
+}
+
+.paginate>ul>li:active {
+    background-color: rgb(67, 67, 154);
+}
+
+.act {
+    background-color: #DAC6E1;
+}
+.pSize{
+    display: flex;
+}
+.pSize>span{
+    margin: auto;
+    font-size: 14px;
+    color: #797bb9;
+}
+.pSize>select{
+    margin: auto;
+    outline: none;
+    -web-kit-appearance: none;
+    -moz-appearance: none;
+    background-color: #FFF7FE;
+    border: rgb(67, 67, 154) 3px dotted;
+    border-radius: 15px;
+    padding-left: 7px;
+    font-size: 14px;
+    color: #797bb9;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+}
+.pCount{
+    display: flex;
+}
+
+.pCount>div{
+    margin: auto;
+    font-size: 14px;
+    color: #797bb9;
+    width: 145px;
+    height: 30px;
+    text-align: center;
+}
+.pCount>div:nth-child(2){
+    width: 90px;
+}
+
+#allCount,#allPageCount{
+    font-size: 16px;
+    color: rgb(235, 148, 14);
+}

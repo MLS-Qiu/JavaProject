@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- 配置基础扫描包路径，springmvc会自动扫描该包及其子包下满足特定条件的类，use-default-filters属性默认值为true，表示使用默认过滤器，默认过滤器会扫描所有标有@Component、@Controller、@Service、@Repository注解的类 -->
+    <context:component-scan base-package="com.pet.project001"/>
+
+    <!-- 解析静态资源，需要与结合mvc:annotation-driven -->
+    <mvc:default-servlet-handler/>
+
+    <!-- 静态资源映射，不仅可以将任意目录下的静态资源映射成指定的路径，还能设置浏览器对此静态资源缓存 -->
+    <mvc:resources location="/assets/" mapping="/assets/**"/>
+
+    <!-- 视图层配置，使用jsp作为模板引擎 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- 四、激活基于注解的配置 @RequestMapping, @ExceptionHandler,数据绑定,@NumberFormat,
+   @DateTimeFormat,@Controller,@Valid,@RequestBody,@ResponseBody等 -->
+    <mvc:annotation-driven/>
+
+    <!-- 五、文件上传解析器。注意事项：id名称必须为multipartResolver -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设置上传文件的最大尺寸为5MB -->
+        <property name="maxUploadSize" value="5242880"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+</beans>

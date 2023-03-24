@@ -1,0 +1,24 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+/* 左浮动 */
+.fl{
+    float: left;
+}
+
+/* 右浮动 */
+.fr{
+    float: right;
+}
+
+/* 清除浮动 */
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+    width: 0;
+}

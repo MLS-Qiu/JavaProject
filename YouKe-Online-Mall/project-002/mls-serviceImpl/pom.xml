@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.mls</groupId>
+        <artifactId>project-002</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>mls-serviceImpl</artifactId>
+
+    <properties>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!--导入service-->
+        <dependency>
+            <groupId>com.mls</groupId>
+            <artifactId>mls-service</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!--导入dao-->
+        <dependency>
+            <groupId>com.mls</groupId>
+            <artifactId>mls-dao</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!--导入Spring的包-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
